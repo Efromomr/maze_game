@@ -1,0 +1,111 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://UI.gd" type="Script" id=1]
+[ext_resource path="res://zdorovye.png" type="Texture" id=2]
+[ext_resource path="res://Items/Bomb.png" type="Texture" id=3]
+[ext_resource path="res://TimerText.gd" type="Script" id=4]
+[ext_resource path="res://MiniMap.gd" type="Script" id=6]
+
+[node name="Control" type="Control"]
+pause_mode = 2
+anchor_right = 0.337
+anchor_bottom = 0.352
+margin_top = 1.0
+margin_right = -0.0880127
+margin_bottom = 21.8
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HeartTexture" type="TextureProgress" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( -495.025, 265.939 )
+value = 100.0
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 2 )
+fill_mode = 3
+tint_under = Color( 0.14902, 0.0352941, 0.0352941, 1 )
+
+[node name="HealthText" type="RichTextLabel" parent="HeartTexture"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConsSlot" type="TextureRect" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -0.341835
+margin_top = -44.6453
+margin_right = 10.6582
+margin_bottom = -28.6453
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MiniMap" type="GridContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -88.1898
+margin_top = 27.8659
+margin_right = -72.1898
+margin_bottom = 68.8659
+columns = 8
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="MiniMap"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -48.0
+margin_top = 4.0
+margin_bottom = 25.0
+text = "
+"
+scroll_active = false
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WeaponSlot" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -40.0
+margin_top = -40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WeaponText" type="RichTextLabel" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -21.5722
+margin_top = -32.4502
+margin_right = -6.5722
+margin_bottom = -14.4502
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConsumablesText" type="RichTextLabel" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 13.0
+margin_top = -40.0
+margin_right = 40.0
+text = "1
+"

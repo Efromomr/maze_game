@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://RodPortal.gd" type="Script" id=1]
+
+[node name="RodPortal" type="Node2D"]
+z_index = 1
+z_as_relative = false
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PoolVector2Array( 0, 0, 0, 0 )
+width = 1.0
+default_color = Color( 1, 1, 1, 1 )

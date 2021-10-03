@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/FishingRod.gd" type="Script" id=1]
+[ext_resource path="res://Items/FishingRod.png" type="Texture" id=2]
+
+[node name="FishingRod" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -2.20486, 1.5749 )
+texture = ExtResource( 2 )
+
+[connection signal="tree_exiting" from="." to="." method="_on_FishingRod_tree_exiting"]

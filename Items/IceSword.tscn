@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Items/IceSword.gd" type="Script" id=2]
+
+[node name="IceSword" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[connection signal="tree_exiting" from="." to="." method="_on_IceSword_tree_exiting"]

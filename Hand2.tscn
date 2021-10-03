@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Hand2.gd" type="Script" id=1]
+[ext_resource path="res://hands.png" type="Texture" id=2]
+
+[node name="Sprite" type="Sprite"]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 30.7347, 0.0681701, 6.55412, 6.16858 )
+script = ExtResource( 1 )

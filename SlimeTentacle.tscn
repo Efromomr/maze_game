@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://syomkikhentaya.png" type="Texture" id=1]
+[ext_resource path="res://Tentacle.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 6.26592
+
+[node name="KinematicBody2D" type="RigidBody2D"]
+script = ExtResource( 2 )
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PoolVector2Array( -0.420784, 0.119789, 93.1572, 22.2981 )
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 1 )
+texture_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 92.1917, 22.0408 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_KinematicBody2D_body_entered"]
